@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>the Fronion - International News that Doesn’t Stink</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <script>
+      function clearName() {
+        if (
+          document.getElementById("nameField").value == "First and Last Name"
+        ) {
+          document.getElementById("nameField").value = "";
+        }
+      }
+      function resetName() {
+        if (document.getElementById("nameField").value == "") {
+          document.getElementById("nameField").value = "First and Last Name";
+        }
+      }
+      function clearPhone() {
+        if (
+          document.getElementById("phoneField").value == "example: 212-123-1234"
+        ) {
+          document.getElementById("phoneField").value = "";
+        }
+      }
+      function resetPhone() {
+        if (document.getElementById("phoneField").value == "") {
+          document.getElementById("phoneField").value = "example: 212-123-1234";
+        }
+      }
+	  function clearEmail() {
+			if (document.getElementById("emailField").value == "example: abc@gmail.com") {
+				document.getElementById("emailField").value = "";
+			}
+		}
+		function resetEmail() {
+				if (document.getElementById("emailField").value == "") {
+					document.getElementById("emailField").value = "example: abc@gmail.com";
+				}
+			}
+			function submitPage() {
+				alert('Thanks for signing up!')
+			}
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <div class="contentWrapper">
+        <div id="fronionLogo">
+          <img
+            src="img/fronion-logo.png"
+            width="250"
+            alt="the Fronion: News That Doesn’t Stink"
+          />
+        </div>
+      </div>
+    </header>
+    <main role="main">
+      <div class="contentWrapper">
+        <form action="" method="post" name="signUpForm" id="signUpForm">
+          <fieldset id="signUp">
+            <legend>Sign Up For Text Alerts</legend>
+
+            <label for="nameField">Name:</label>
+            <input
+              id="nameField"
+              name="nameField"
+              type="text"
+              class="textfield"
+              value="First and Last Name"
+              onfocus="clearName();"
+              onblur="resetName();"
+            />
+
+            <label for="phoneField">Phone:</label>
+            <input
+              id="phoneField"
+              name="phoneField"
+              type="text"
+              class="textfield"
+              value="example: 212-123-1234"
+              onfocus="clearPhone();"
+              onblur="resetPhone();"
+            />
+
+            <label for="emailField">Contact:</label>
+            <input
+              id="emailField"
+              name="emailField"
+              type="text"
+              class="textfield"
+              value="example: abc@gmail.com"
+              onfocus="clearEmail();"
+              onblur="resetEmail();"
+            />
+
+            <input
+              id="submit"
+              type="submit"
+              name="submitPage"
+              value="Sign Me Up!"
+            />
+          </fieldset>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="contentWrapper">
+        Copyright The Fronion - All Rights Reserved
+      </div>
+    </footer>
+  </body>
+</html>
